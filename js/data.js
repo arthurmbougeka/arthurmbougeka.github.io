@@ -61,12 +61,12 @@ export const profile = {
 
   about: {
     en: [
-      "Replace this paragraph with your presentation: where you're from, what you're studying precisely (e.g. Bachelor in Computer Science at Hochschule Darmstadt), and since when.",
-      "Add a second paragraph about what interests you in computer science and a project or experience that stood out to you."
+      "Student in Bachelor in Computer Science at Hochschule Darmstadt, Germany. I have a strong passion for web development and AI engineering, and I enjoy creating innovative solutions to complex problems.",
+      "In my free time, I like to explore new technologies. I believe that continuous learning and collaboration are key to success in the tech industry."
     ],
     de: [
-      "Ersetze diesen Absatz durch deine Vorstellung: woher du kommst, was genau du studierst (z. B. Bachelor Informatik an der Hochschule Darmstadt), und seit wann.",
-      "Füge einen zweiten Absatz hinzu über das, was dich an der Informatik interessiert, und ein Projekt oder eine Erfahrung, die dich geprägt hat."
+      "Student im Bachelorstudiengang Informatik an der Hochschule Darmstadt, Deutschland. Ich habe eine große Leidenschaft für Webentwicklung und KI-Engineering und genieße es, innovative Lösungen für komplexe Probleme zu entwickeln.",
+      "In meiner Freizeit erkunde ich gerne neue Technologien. Ich glaube, dass kontinuierliches Lernen und Zusammenarbeit der Schlüssel zum Erfolg in der Tech-Branche sind."
     ]
   },
 
