@@ -93,13 +93,13 @@ export const projects = [
     demoUrl: ""
   },
   {
-    title: { en: "Project name 2", de: "Projektname 2" },
-    tags: [{ label: "Flutter", type: "red" }, { label: "Personal project", type: "" }],
+    title: { en: "gr03_Referee", de: "gr03_Referee" },
+    tags: [{ label: "Flutter", type: "red" }, { label: "School project", type: "" }],
     description: {
-      en: "Describe in 2-3 sentences the goal of the project, the problem it solved, and what you learned or your contribution.",
-      de: "Beschreibe in 2-3 Sätzen das Ziel des Projekts, das gelöste Problem und was du gelernt hast oder dein Beitrag war."
+      en: "The goal of this project was to create a mobile application that allows referees to manage and track hockey matches. I contributed by implementing the user interface and integrating the backend services, which enhanced my skills in Flutter development. During this project I learned that building an App that actually meet the expectations of the target individuals group requires many steps such as: find a problem, define the purposes and the success criteria, carry out Interviews and user resesarch, create a prototype and test it with the target group, and finally implement the final version of the App.",
+      de: "Das Ziel dieses Projekts war es, eine mobile Anwendung zu erstellen, die es Schiedsrichtern ermöglicht, Hockeyspiele zu verwalten und zu verfolgen. Ich habe zur Implementierung der Benutzeroberfläche und zur Integration der Backend-Dienste beigetragen, was meine Fähigkeiten in der Flutter-Entwicklung verbessert hat. Während dieses Projekts habe ich gelernt, dass die Erstellung einer App, die tatsächlich den Erwartungen der Zielgruppe entspricht, viele Schritte erfordert, wie z. B.: ein Problem finden, die Ziele und Erfolgskriterien definieren, Interviews und Benutzerforschung durchführen, einen Prototyp erstellen und ihn mit der Zielgruppe testen und schließlich die endgültige Version der App implementieren."
     },
-    codeUrl: "#",
+    codeUrl: "https://code.fbi.h-da.de/zander/hci/projects/2025_ws/gr03_referee",
     demoUrl: ""
   },
   {
