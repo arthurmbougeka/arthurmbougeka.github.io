@@ -1,267 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arthur Mbougeka — Portfolio Informatique</title>
+<title>Arthur Mbougeka — Computer Science Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#EDEAE2;
-    --paper-dark:#E3DFD3;
-    --ink:#1A1A1A;
-    --red:#C73E1D;
-    --blue:#1F4E8C;
-    --yellow:#E8B23D;
-    --line: rgba(26,26,26,0.15);
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'IBM Plex Sans', sans-serif;
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{
-    font-family:'Space Grotesk', sans-serif;
-    line-height:1.1;
-    font-weight:700;
-  }
-  a{color:inherit;}
-  .mono{font-family:'IBM Plex Mono', monospace;}
-  .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
-
-  /* NAV */
-  nav{
-    position:sticky; top:0; z-index:50;
-    background:var(--paper);
-    border-bottom:2px solid var(--ink);
-  }
-  nav .wrap{
-    display:flex; justify-content:space-between; align-items:center;
-    height:64px;
-  }
-  nav .brand{font-weight:700; font-size:1.1rem; letter-spacing:-0.02em;}
-  nav ul{list-style:none; display:flex; gap:28px;}
-  nav a{text-decoration:none; font-size:0.95rem; font-weight:500;}
-  nav a:hover{color:var(--red);}
-  .nav-toggle{display:none; background:none; border:none; font-size:1.5rem; cursor:pointer;}
-
-  @media (max-width:720px){
-    nav ul{
-      position:absolute; top:64px; left:0; right:0;
-      background:var(--paper);
-      flex-direction:column; gap:0;
-      border-bottom:2px solid var(--ink);
-      display:none;
-    }
-    nav ul.open{display:flex;}
-    nav ul li{border-top:1px solid var(--line);}
-    nav ul a{display:block; padding:16px 32px;}
-    .nav-toggle{display:block;}
-  }
-
-  /* HERO */
-  header.hero{
-    position:relative;
-    padding:100px 0 90px;
-    overflow:hidden;
-    border-bottom:2px solid var(--ink);
-  }
-  .hero-grid{
-    display:grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap:40px;
-    align-items:center;
-    position:relative;
-    z-index:2;
-  }
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--blue);
-    font-size:0.9rem;
-    margin-bottom:18px;
-  }
-  .hero h1{
-    font-size:clamp(2.4rem, 5vw, 4rem);
-    letter-spacing:-0.02em;
-    margin-bottom:20px;
-  }
-  .hero h1 span{color:var(--red);}
-  .hero p.lead{
-    font-size:1.15rem;
-    max-width:480px;
-    margin-bottom:32px;
-    color:#3a3a3a;
-  }
-  .btn-row{display:flex; gap:16px; flex-wrap:wrap;}
-  .btn{
-    display:inline-block;
-    padding:14px 26px;
-    font-weight:600;
-    text-decoration:none;
-    border:2px solid var(--ink);
-  }
-  .btn-primary{background:var(--ink); color:var(--paper);}
-  .btn-primary:hover{background:var(--red); border-color:var(--red);}
-  .btn-outline{background:transparent; color:var(--ink);}
-  .btn-outline:hover{border-color:var(--blue); color:var(--blue);}
-
-  /* geometric hero motif */
-  .motif{
-    position:relative;
-    width:100%;
-    aspect-ratio:1/1;
-    max-width:340px;
-    justify-self:center;
-  }
-  .motif .circle{
-    position:absolute; border-radius:50%;
-    width:58%; height:58%; background:var(--yellow);
-    top:0; right:0;
-  }
-  .motif .square{
-    position:absolute;
-    width:46%; height:46%; background:var(--blue);
-    bottom:6%; left:2%;
-  }
-  .motif .triangle{
-    position:absolute;
-    left:38%; top:30%;
-    width:0; height:0;
-    border-left:70px solid transparent;
-    border-right:70px solid transparent;
-    border-bottom:120px solid var(--red);
-  }
-  @media (max-width:720px){
-    .hero-grid{grid-template-columns:1fr;}
-    .motif{margin-top:20px; max-width:220px;}
-  }
-
-  section{padding:80px 0;}
-  section.alt{background:var(--paper-dark); border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);}
-  .section-head{
-    display:flex; align-items:baseline; gap:16px;
-    margin-bottom:44px;
-  }
-  .section-head .index{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--red); font-size:1rem;
-  }
-  .section-head h2{font-size:2rem;}
-
-  /* ABOUT */
-  .about-grid{
-    display:grid; grid-template-columns: 2fr 1fr; gap:50px;
-  }
-  .about-grid p{margin-bottom:16px; max-width:60ch;}
-  .facts{list-style:none;}
-  .facts li{
-    padding:14px 0;
-    border-top:1px solid var(--line);
-    display:flex; justify-content:space-between; gap:12px;
-    font-size:0.95rem;
-  }
-  .facts li:last-child{border-bottom:1px solid var(--line);}
-  .facts .label{font-family:'IBM Plex Mono', monospace; color:var(--blue);}
-
-  @media (max-width:720px){ .about-grid{grid-template-columns:1fr;} }
-
-  /* PROJECTS */
-  .project-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:2px;
-    background:var(--ink);
-    border:2px solid var(--ink);
-  }
-  .project{
-    background:var(--paper);
-    padding:32px;
-    display:flex; flex-direction:column; gap:14px;
-  }
-  .project .tag-row{display:flex; flex-wrap:wrap; gap:8px;}
-  .tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.75rem;
-    padding:4px 10px;
-    border:1px solid var(--ink);
-  }
-  .tag.blue{background:var(--blue); color:var(--paper); border-color:var(--blue);}
-  .tag.red{background:var(--red); color:var(--paper); border-color:var(--red);}
-  .tag.yellow{background:var(--yellow); border-color:var(--yellow);}
-  .project h3{font-size:1.3rem;}
-  .project p{color:#3a3a3a; font-size:0.95rem;}
-  .project .links{margin-top:auto; display:flex; gap:18px; padding-top:8px;}
-  .project .links a{
-    text-decoration:none; font-weight:600; font-size:0.9rem;
-    border-bottom:2px solid var(--red);
-  }
-  @media (max-width:720px){ .project-grid{grid-template-columns:1fr;} }
-
-  /* SKILLS */
-  .skills-cols{
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:36px;
-  }
-  .skills-cols h3{
-    font-size:1rem;
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--red);
-    margin-bottom:16px;
-    padding-bottom:10px;
-    border-bottom:2px solid var(--ink);
-  }
-  .skills-cols ul{list-style:none;}
-  .skills-cols li{padding:6px 0; font-size:0.95rem;}
-  @media (max-width:720px){ .skills-cols{grid-template-columns:1fr 1fr;} }
-
-  /* CONTACT / FOOTER */
-  footer{
-    padding:70px 0 40px;
-    text-align:left;
-  }
-  footer h2{font-size:2.2rem; max-width:600px; margin-bottom:28px;}
-  .contact-links{display:flex; gap:28px; flex-wrap:wrap; margin-bottom:60px;}
-  .contact-links a{
-    text-decoration:none; font-weight:600;
-    padding-bottom:4px; border-bottom:2px solid var(--ink);
-  }
-  .contact-links a:hover{border-color:var(--red); color:var(--red);}
-  .foot-note{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.8rem; color:#666;
-    border-top:1px solid var(--line);
-    padding-top:20px;
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <div class="brand">ARTHUR MBOUGEKA</div>
-    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="brand" id="brand"></div>
     <ul id="navlinks">
-      <li><a href="#apropos">À propos</a></li>
-      <li><a href="#projets">Projects</a></li>
-      <li><a href="#competences">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-nav="about"></a></li>
+      <li><a href="#projects" data-nav="projects"></a></li>
+      <li><a href="#skills" data-nav="skills"></a></li>
+      <li><a href="#education" data-nav="education"></a></li>
+      <li><a href="#contact" data-nav="contact"></a></li>
     </ul>
+    <div class="nav-controls">
+      <button class="icon-btn" id="lang-toggle" aria-label="Switch language"></button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode"></button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">// Computer science student — Deutschland</div>
-      <h1>Arthur Mbougeka<br><span>build </span> thiings with code.</h1>
-      <p class="lead">I'm a student passsionated about web-development and AI-Engineering</p>
+      <div class="eyebrow" id="eyebrow"></div>
+      <h1 id="hero-title"></h1>
+      <p class="lead" id="hero-lead"></p>
       <div class="btn-row">
-        <a href="#projets" class="btn btn-primary">See my projects</a>
-        <a href="#contact" class="btn btn-outline">Contact me</a>
+        <a href="#projects" class="btn btn-primary" id="btn-projects"></a>
+        <a href="#contact" class="btn btn-outline" id="btn-contact"></a>
       </div>
     </div>
     <div class="motif">
@@ -272,130 +47,47 @@
   </div>
 </header>
 
-<section id="apropos">
+<section id="about">
   <div class="wrap about-grid">
     <div>
-      <div class="section-head"><span class="index mono">01</span><h2>À propos</h2></div>
-      <p>Remplace ce paragraphe par ta présentation : d'où tu viens, ce que tu étudies précisément (ex. Bachelor en Informatique à [nom de l'université]), et depuis quand.</p>
-      <p>Ajoute un deuxième paragraphe sur ce qui t'intéresse en informatique — algorithmique, développement web, IA, systèmes — et un projet ou une expérience qui t'a marqué.</p>
+      <div class="section-head"><span class="index mono">01</span><h2 id="about-heading"></h2></div>
+      <div id="about-text"></div>
     </div>
-    <ul class="facts">
-      <li><span class="label mono">LOCATION</span><span>Germany</span></li>
-      <li><span class="label mono">FORMATION</span><span>Hochschule Darmstadt</span></li>
-      <li><span class="label mono">LEVEL/span><span>just completed my 4th Semester</span></li>
-      <li><span class="label mono">LANGUAGES</span><span>German(C2), English(C1), French(Mothertongue)</span></li>
-    </ul>
+    <ul class="facts" id="about-facts"></ul>
   </div>
 </section>
 
-<section class="alt" id="projets">
+<section class="alt" id="projects">
   <div class="wrap">
-    <div class="section-head"><span class="index mono">02</span><h2>Projects</h2></div>
-    <div class="project-grid">
-
-      <div class="project">
-        <div class="tag-row">
-          <span class="tag blue">Java</span>
-          <span class="tag">École</span>
-        </div>
-        <h3>Nom du projet 1</h3>
-        <p>Décris en 2-3 phrases le but du projet, le problème résolu, et ce que tu as appris ou ta contribution.</p>
-        <div class="links">
-          <a href="#" target="_blank">Code source</a>
-          <a href="#" target="_blank">Démo</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="tag-row">
-          <span class="tag red">Python</span>
-          <span class="tag">Projet perso</span>
-        </div>
-        <h3>Nom du projet 2</h3>
-        <p>Décris en 2-3 phrases le but du projet, le problème résolu, et ce que tu as appris ou ta contribution.</p>
-        <div class="links">
-          <a href="#" target="_blank">Code source</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="tag-row">
-          <span class="tag yellow">SQL</span>
-          <span class="tag">Groupe</span>
-        </div>
-        <h3>Nom du projet 3</h3>
-        <p>Décris en 2-3 phrases le but du projet, le problème résolu, et ce que tu as appris ou ta contribution.</p>
-        <div class="links">
-          <a href="#" target="_blank">Code source</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="tag-row">
-          <span class="tag blue">C</span>
-          <span class="tag">École</span>
-        </div>
-        <h3>Nom du projet 4</h3>
-        <p>Décris en 2-3 phrases le but du projet, le problème résolu, et ce que tu as appris ou ta contribution.</p>
-        <div class="links">
-          <a href="#" target="_blank">Code source</a>
-        </div>
-      </div>
-
-    </div>
+    <div class="section-head"><span class="index mono">02</span><h2 id="projects-heading"></h2></div>
+    <div class="project-grid" id="project-grid"></div>
   </div>
 </section>
 
-<section id="competences">
+<section id="skills">
   <div class="wrap">
-    <div class="section-head"><span class="index mono">03</span><h2>Compétences</h2></div>
-    <div class="skills-cols">
-      <div>
-        <h3>LANGAGES</h3>
-        <ul>
-          <li>Java</li>
-          <li>Python</li>
-          <li>C</li>
-          <li>SQL</li>
-          <li>C++</li>
-          <li>Dart</li>
-        </ul>
-      </div>
-      <div>
-        <h3>OUTILS</h3>
-        <ul>
-          <li>Git / GitHub</li>
-          <li>VS Code</li>
-          <li>Linux</li>
-          <li>Flutter</li>
-        </ul>
-      </div>
-      <div>
-        <h3>CONCEPTS</h3>
-        <ul>
-          <li>Algorithmic</li>
-          <li>Database</li>
-          <li>Data Structures</li>
-          <li>UI-Design</li>
-          <li>Object oriented Programming</li>
-        </ul>
-      </div>
-    </div>
+    <div class="section-head"><span class="index mono">03</span><h2 id="skills-heading"></h2></div>
+    <div class="skills-cols" id="skills-cols"></div>
+  </div>
+</section>
+
+<section class="alt" id="education">
+  <div class="wrap">
+    <div class="section-head"><span class="index mono">04</span><h2 id="education-heading"></h2></div>
+    <p class="lead" id="education-note" style="font-size:0.95rem; margin-bottom:32px;"></p>
+    <div class="edu-timeline" id="edu-timeline"></div>
   </div>
 </section>
 
 <footer id="contact">
   <div class="wrap">
-    <div class="section-head"><span class="index mono">04</span><h2>Contact</h2></div>
-    <h2>A question, An opportunity ? write me.</h2>
-    <div class="contact-links">
-      <a href="mailto:ton.email@exemple.com">mbougekaarthur@gmail.com</a>
-      <a href="https://github.com/tonpseudo" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/tonpseudo" target="_blank">LinkedIn</a>
-    </div>
-    <div class="foot-note">© 2026 Arthur Mbougeka — Portfolio built for GitHub Pages</div>
+    <div class="section-head"><span class="index mono">05</span><h2 id="contact-heading-small"></h2></div>
+    <h2 id="contact-heading"></h2>
+    <div class="contact-links" id="contact-links"></div>
+    <div class="foot-note" id="foot-note"></div>
   </div>
 </footer>
 
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
