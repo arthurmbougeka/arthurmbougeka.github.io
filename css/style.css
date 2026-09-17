@@ -209,6 +209,7 @@ section.alt{background:var(--paper-dark); border-top:2px solid var(--ink); borde
 .tag.red{background:var(--red); color:#fff; border-color:var(--red);}
 .tag.yellow{background:var(--yellow); color:#1A1A1A; border-color:var(--yellow);}
 .project h3{font-size:1.3rem;}
+.project-period{font-size:0.78rem; color:var(--muted-soft); margin-top:-8px;}
 .project p{color:var(--muted); font-size:0.95rem;}
 .project .links{margin-top:auto; display:flex; gap:18px; padding-top:8px;}
 .project .links a{
