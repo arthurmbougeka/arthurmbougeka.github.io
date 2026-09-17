@@ -61,20 +61,20 @@ export const profile = {
 
   about: {
     en: [
-      "Student in Bachelor in Computer Science at Hochschule Darmstadt, Germany. I have a strong passion for web development and AI engineering, and I enjoy creating innovative solutions to complex problems.",
-      "In my free time, I like to explore new technologies. I believe that continuous learning and collaboration are key to success in the tech industry."
+      "Computer science student pursuing a B.Sc. at Hochschule Darmstadt, currently in my 5th semester, with a focus on software development, cybersecurity and modern web technologies.",
+      "I like solving complex problems in a structured way, learning fast, and taking my own projects from idea to real implementation — from backend/DevOps pipelines to mobile apps built around real user research."
     ],
     de: [
-      "Student im Bachelorstudiengang Informatik an der Hochschule Darmstadt, Deutschland. Ich habe eine große Leidenschaft für Webentwicklung und KI-Engineering und genieße es, innovative Lösungen für komplexe Probleme zu entwickeln.",
-      "In meiner Freizeit erkunde ich gerne neue Technologien. Ich glaube, dass kontinuierliches Lernen und Zusammenarbeit der Schlüssel zum Erfolg in der Tech-Branche sind."
+      "Informatikstudent im B.Sc. an der Hochschule Darmstadt, aktuell im 5. Semester, mit Schwerpunkt auf Softwareentwicklung, Cybersicherheit und modernen Web-Technologien.",
+      "Ich löse komplexe Probleme gerne strukturiert, lerne schnell und bringe eigene Projekte von der Idee bis zur echten Umsetzung — von Backend-/DevOps-Pipelines bis zu mobilen Apps, die auf echter Nutzerforschung basieren."
     ]
   },
 
   facts: {
-    location: { en: "Germany", de: "Deutschland" },
+    location: { en: "Darmstadt, Germany", de: "Darmstadt, Deutschland" },
     formation: "Hochschule Darmstadt",
-    level: { en: "Just completed my 4th semester", de: "4. Semester gerade abgeschlossen" },
-    languages: { en: "German (C2), English (C1), French (native)", de: "Deutsch (C2), Englisch (C1), Französisch (Muttersprache)" }
+    level: { en: "5th semester", de: "5. Semester" },
+    languages: { en: "German (C1), English (C1), French (native)", de: "Deutsch (C1), Englisch (C1), Französisch (Muttersprache)" }
   }
 };
 
@@ -83,41 +83,50 @@ export const profile = {
 // demoUrl: optional, only if the project has a live demo/deployment
 export const projects = [
   {
-    title: { en: "Project name 1", de: "Projektname 1" },
-    tags: [{ label: "C++", type: "blue" }, { label: "School", type: "" }],
+    title: {
+      en: "Backend Development & DevOps Integration for a Production Web App",
+      de: "Backend-Entwicklung & DevOps-Integration einer produktiven Webanwendung"
+    },
+    period: "Oct 2025 – Feb 2026",
+    tags: [
+      { label: "Python", type: "blue" }, { label: "FastAPI", type: "" }, { label: "Docker", type: "" },
+      { label: "Kubernetes", type: "red" }, { label: "CI/CD", type: "" }
+    ],
     description: {
-      en: "Describe in 2-3 sentences the goal of the project, the problem it solved, and what you learned or your contribution.",
-      de: "Beschreibe in 2-3 Sätzen das Ziel des Projekts, das gelöste Problem und was du gelernt hast oder dein Beitrag war."
+      en: "Implemented REST endpoints, database migrations and automated test suites (unit, integration, service). Built the CI/CD pipeline with containerized deployment and centralized logging via Graylog.",
+      de: "Implementierung von REST-Endpunkten, Datenbankmigrationen und automatisierten Testsuiten (Unit, Integration, Service). Aufbau der CI/CD-Pipeline mit containerisiertem Deployment und zentralisiertem Logging via Graylog."
     },
     codeUrl: "#",
     demoUrl: ""
   },
   {
-    title: { en: "gr03_Referee", de: "gr03_Referee" },
-    tags: [{ label: "Flutter", type: "red" }, { label: "School project", type: "" }],
-    description: {
-      en: "The goal of this project was to create a mobile application that allows referees to manage and track hockey matches. I contributed by implementing the user interface and integrating the backend services, which enhanced my skills in Flutter development. During this project I learned that building an App that actually meet the expectations of the target individuals group requires many steps such as: find a problem, define the purposes and the success criteria, carry out Interviews and user resesarch, create a prototype and test it with the target group, and finally implement the final version of the App.",
-      de: "Das Ziel dieses Projekts war es, eine mobile Anwendung zu erstellen, die es Schiedsrichtern ermöglicht, Hockeyspiele zu verwalten und zu verfolgen. Ich habe zur Implementierung der Benutzeroberfläche und zur Integration der Backend-Dienste beigetragen, was meine Fähigkeiten in der Flutter-Entwicklung verbessert hat. Während dieses Projekts habe ich gelernt, dass die Erstellung einer App, die tatsächlich den Erwartungen der Zielgruppe entspricht, viele Schritte erfordert, wie z. B.: ein Problem finden, die Ziele und Erfolgskriterien definieren, Interviews und Benutzerforschung durchführen, einen Prototyp erstellen und ihn mit der Zielgruppe testen und schließlich die endgültige Version der App implementieren."
+    title: {
+      en: "Field Hockey Referee Mobile App",
+      de: "Mobile Schiedsrichter-Applikation für Feldhockey"
     },
-    codeUrl: "https://code.fbi.h-da.de/zander/hci/projects/2025_ws/gr03_referee",
-    demoUrl: ""
-  },
-  {
-    title: { en: "Project name 3", de: "Projektname 3" },
-    tags: [{ label: "SQL", type: "yellow" }, { label: "Group project", type: "" }],
+    period: "Nov 2025 – Mar 2026",
+    tags: [
+      { label: "Flutter", type: "yellow" }, { label: "Dart", type: "" }, { label: "UI Design", type: "" }, { label: "User Research", type: "" }
+    ],
     description: {
-      en: "Describe in 2-3 sentences the goal of the project, the problem it solved, and what you learned or your contribution.",
-      de: "Beschreibe in 2-3 Sätzen das Ziel des Projekts, das gelöste Problem und was du gelernt hast oder dein Beitrag war."
+      en: "Full product cycle: user research, structured interviews, prototyping and UI design through to native implementation — focused on user-friendly game management and real-time tracking.",
+      de: "Gesamter Produktzyklus: Nutzerforschung, strukturierte Interviews, Prototyping und UI-Design bis zur nativen Implementierung — mit Fokus auf benutzerfreundliche Spielverwaltung und Echtzeit-Verfolgung."
     },
     codeUrl: "#",
     demoUrl: ""
   },
   {
-    title: { en: "Project name 4", de: "Projektname 4" },
-    tags: [{ label: "Python", type: "blue" }, { label: "School", type: "" }],
+    title: {
+      en: "Web-Based Pizza Ordering System (LAMP Stack)",
+      de: "Webbasiertes Pizzaservice-Bestellsystem (LAMP-Stack)"
+    },
+    period: "Apr 2026 – Jul 2026",
+    tags: [
+      { label: "PHP", type: "blue" }, { label: "MySQL", type: "" }, { label: "JavaScript", type: "" }, { label: "Apache", type: "" }
+    ],
     description: {
-      en: "Describe in 2-3 sentences the goal of the project, the problem it solved, and what you learned or your contribution.",
-      de: "Beschreibe in 2-3 Sätzen das Ziel des Projekts, das gelöste Problem und was du gelernt hast oder dein Beitrag war."
+      en: "Managed the full order process — from order placement through processing to delivery. Custom framework architecture built with PHP, MySQL and Apache.",
+      de: "Verwaltung des vollständigen Bestellprozesses — von der Auftragsannahme über die Bearbeitung bis zur Lieferung. Eigenständige Framework-Architektur mit PHP, MySQL und Apache."
     },
     codeUrl: "#",
     demoUrl: ""

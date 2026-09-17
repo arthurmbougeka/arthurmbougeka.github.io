@@ -49,6 +49,7 @@ export function renderAll(lang) {
         ${p.tags.map(tag => `<span class="tag ${tag.type}">${tag.label}</span>`).join("")}
       </div>
       <h3>${t(p.title, lang)}</h3>
+      ${p.period ? `<div class="project-period mono">${p.period}</div>` : ""}
       <p>${t(p.description, lang)}</p>
       <div class="links">
         <a href="${p.codeUrl}" target="_blank">${s.sourceCode}</a>
